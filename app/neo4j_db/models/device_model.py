@@ -12,4 +12,4 @@ class Device:
     brand: str
     model: str
     os: str
-    location: Location
+    location: Location = None
