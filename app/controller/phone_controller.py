@@ -15,7 +15,6 @@ def get_interaction():
    return jsonify({ }), 200
 
 
-# Cypher query to find all devices connected via Bluetooth and calculate the path's total duration
 query = """
     MATCH (n:DevicePerson)-[rel:CONNECTED {method: 'Bluetooth'}]->(n2:DevicePerson)
    RETURN n AS from_device, n2 AS to_device, rel
