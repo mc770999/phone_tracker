@@ -14,7 +14,6 @@ def get_interaction():
    add_device_phone(request.json)
    return jsonify({ }), 200
 
-
 query = """
     MATCH (n:DevicePerson)-[rel:CONNECTED {method: 'Bluetooth'}]->(n2:DevicePerson)
    RETURN n AS from_device, n2 AS to_device, rel
